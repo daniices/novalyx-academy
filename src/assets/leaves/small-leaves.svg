@@ -1,0 +1,29 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<g opacity="0.45">
+
+<path 
+d="M90 150C110 110 115 70 95 35C75 5 40 15 35 45C30 80 60 130 90 150Z"
+fill="#799A76"/>
+
+
+<path 
+d="M90 135C85 95 75 65 55 40"
+stroke="#5F805C"
+stroke-width="4"
+stroke-linecap="round"/>
+
+
+<path 
+d="M70 95C95 95 115 80 120 55C95 55 75 70 70 95Z"
+fill="#A8C19F"/>
+
+
+<path 
+d="M55 65C75 65 90 50 92 30C70 30 55 45 55 65Z"
+fill="#A8C19F"/>
+
+
+</g>
+
+</svg>

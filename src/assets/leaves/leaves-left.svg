@@ -1,0 +1,34 @@
+<svg width="260" height="360" viewBox="0 0 260 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<g opacity="0.45">
+
+<path 
+d="M70 330C130 280 150 210 125 130C105 70 60 35 35 65C5 105 20 260 70 330Z" 
+fill="#799A76"/>
+
+
+<path 
+d="M80 300C100 240 100 170 65 100" 
+stroke="#5F805C" 
+stroke-width="5" 
+stroke-linecap="round"/>
+
+
+<path 
+d="M80 240C120 240 155 215 165 175C120 170 90 195 80 240Z" 
+fill="#A8C19F"/>
+
+
+<path 
+d="M65 175C105 170 130 145 135 110C95 110 70 135 65 175Z" 
+fill="#A8C19F"/>
+
+
+<path 
+d="M45 110C80 105 100 85 100 55C70 55 50 75 45 110Z" 
+fill="#A8C19F"/>
+
+
+</g>
+
+</svg>

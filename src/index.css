@@ -1,0 +1,146 @@
+html {
+  scroll-behavior: smooth;
+}
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #FAF8F3;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(121, 154, 118, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 80% 30%, rgba(196, 135, 92, 0.06) 0%, transparent 30%),
+    radial-gradient(circle at 50% 90%, rgba(121, 154, 118, 0.05) 0%, transparent 25%);
+}
+.botanical-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.botanical-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.botanical-bg::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 420px;
+  height: 420px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%23799A76' fill-opacity='.14' d='M150 20 C80 60 45 150 150 270 C255 150 220 60 150 20Z'/%3E%3Cpath d='M150 35 C150 120 150 190 150 250' stroke='%23799A76' stroke-opacity='.18' stroke-width='5' fill='none'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-35deg);
+}
+
+
+.botanical-bg::after {
+  content: "";
+  position: absolute;
+  bottom: -90px;
+  right: -70px;
+  width: 360px;
+  height: 360px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%23C4875C' fill-opacity='.12' d='M150 20 C80 60 45 150 150 270 C255 150 220 60 150 20Z'/%3E%3Cpath d='M150 35 C150 120 150 190 150 250' stroke='%23C4875C' stroke-opacity='.15' stroke-width='5' fill='none'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(35deg);
+}
+
+.botanical-base {
+  position: relative;
+  overflow: hidden;
+}
+
+.botanical-base::before,
+.botanical-base::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0.18;
+}
+
+
+/* Hero */
+.botanical-hero::before {
+  top: -40px;
+  right: -30px;
+  width: 260px;
+  height: 260px;
+  background-image: url("/leaves-top-right.svg");
+}
+
+
+/* About */
+.botanical-about::before {
+  bottom: -50px;
+  left: -40px;
+  width: 230px;
+  height: 230px;
+  background-image: url("/leaves-bottom-left.svg");
+}
+
+
+/* Courses */
+.botanical-courses::after {
+  top: 40px;
+  left: -30px;
+  width: 220px;
+  height: 220px;
+  background-image: url("/leaves-left.svg");
+}
+
+
+/* Who I Teach */
+.botanical-who::after {
+  bottom: -40px;
+  right: -20px;
+  width: 250px;
+  height: 250px;
+  background-image: url("/leaves-bottom-right.svg");
+}
+
+
+/* How It Works */
+.botanical-how::before {
+  top: 20px;
+  right: 20px;
+  width: 180px;
+  height: 180px;
+  background-image: url("/small-leaves.svg");
+}
+.botanical-bg span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+
+/* Small leaf branch top right */
+.botanical-bg .leaf-decoration {
+  top: 40px;
+  right: 40px;
+  width: 180px;
+  height: 180px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 180 C100 100 130 50 170 20' stroke='%23799A76' stroke-opacity='.18' stroke-width='4' fill='none'/%3E%3Cellipse cx='135' cy='75' rx='25' ry='45' fill='%23799A76' fill-opacity='.13' transform='rotate(35 135 75)'/%3E%3Cellipse cx='105' cy='115' rx='20' ry='38' fill='%23799A76' fill-opacity='.13' transform='rotate(-20 105 115)'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/* Small leaf branch bottom left */
+.botanical-bg .leaf-decoration-two {
+  bottom: 30px;
+  left: 30px;
+  width: 150px;
+  height: 150px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M90 180 C80 120 50 70 20 40' stroke='%23C4875C' stroke-opacity='.15' stroke-width='4' fill='none'/%3E%3Cellipse cx='60' cy='90' rx='22' ry='40' fill='%23C4875C' fill-opacity='.12' transform='rotate(-35 60 90)'/%3E%3Cellipse cx='95' cy='130' rx='18' ry='35' fill='%23C4875C' fill-opacity='.12' transform='rotate(25 95 130)'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
