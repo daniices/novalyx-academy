@@ -9,6 +9,7 @@ function Booking() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    language: "",
     level: "",
     reason: "",
     goals: "",
@@ -29,15 +30,17 @@ function Booking() {
 
     const message =
       language === "en"
-        ? `Hello NovaLyx Academy! I would like to book a free Spanish trial lesson.
+        ? `Hello NovaLyx Academy! I would like to book a free language trial lesson.
 
+Language: ${formData.language}
 Name: ${formData.name}
 Email: ${formData.email}
 Level: ${formData.level}
 Reason for learning: ${formData.reason}
 Goals: ${formData.goals}`
-        : `¡Hola NovaLyx Academy! Me gustaría reservar una clase de prueba gratuita de español.
+        : `¡Hola NovaLyx Academy! Me gustaría reservar una clase de prueba gratuita de idiomas.
 
+Idioma: ${formData.language}
 Nombre: ${formData.name}
 Correo: ${formData.email}
 Nivel: ${formData.level}
@@ -57,6 +60,7 @@ Objetivos: ${formData.goals}`;
     setFormData({
       name: "",
       email: "",
+      language: "",
       level: "",
       reason: "",
       goals: "",
@@ -82,6 +86,7 @@ Objetivos: ${formData.goals}`;
         <div className="grid gap-16 lg:grid-cols-2">
 
 
+
           {/* Left Side */}
 
           <div>
@@ -102,6 +107,7 @@ Objetivos: ${formData.goals}`;
             <p className="mt-8 text-lg leading-8 text-slate-300">
               {t.bookingDescription}
             </p>
+
 
 
 
@@ -161,6 +167,37 @@ Objetivos: ${formData.goals}`;
 
 
 
+              {/* Language Selection */}
+
+              <select
+                name="language"
+                value={formData.language}
+                onChange={handleChange}
+                required
+                className="w-full rounded-xl border border-[#E7DDCC] p-4 text-slate-900 outline-none focus:border-[#799A76]"
+              >
+
+                <option value="">
+                  {t.languagePlaceholder}
+                </option>
+
+                <option>
+                  {t.spanish}
+                </option>
+
+                <option>
+                  {t.english}
+                </option>
+
+              </select>
+
+
+
+
+
+
+              {/* Level */}
+
               <select
                 name="level"
                 value={formData.level}
@@ -173,17 +210,26 @@ Objetivos: ${formData.goals}`;
                   {t.levelPlaceholder}
                 </option>
 
-                <option>{t.beginner}</option>
+                <option>
+                  {t.beginner}
+                </option>
 
-                <option>{t.intermediate}</option>
+                <option>
+                  {t.intermediate}
+                </option>
 
-                <option>{t.advanced}</option>
+                <option>
+                  {t.advanced}
+                </option>
 
               </select>
 
 
 
 
+
+
+              {/* Goal */}
 
               <select
                 name="reason"
@@ -197,17 +243,28 @@ Objetivos: ${formData.goals}`;
                   {t.reasonPlaceholder}
                 </option>
 
-                <option>{t.travel}</option>
+                <option>
+                  {t.travel}
+                </option>
 
-                <option>{t.work}</option>
+                <option>
+                  {t.work}
+                </option>
 
-                <option>{t.school}</option>
+                <option>
+                  {t.school}
+                </option>
 
-                <option>{t.conversation}</option>
+                <option>
+                  {t.conversation}
+                </option>
 
-                <option>{t.personalInterest}</option>
+                <option>
+                  {t.personalInterest}
+                </option>
 
               </select>
+
 
 
 
@@ -222,6 +279,7 @@ Objetivos: ${formData.goals}`;
                 required
                 className="w-full rounded-xl border border-[#E7DDCC] p-4 text-slate-900 outline-none focus:border-[#799A76]"
               ></textarea>
+
 
 
 

@@ -7,18 +7,22 @@ function FAQ() {
 
   const faqs = [
     {
+      number: "01",
       question: t.faq1Question,
       answer: t.faq1Answer,
     },
     {
+      number: "02",
       question: t.faq2Question,
       answer: t.faq2Answer,
     },
     {
+      number: "03",
       question: t.faq3Question,
       answer: t.faq3Answer,
     },
     {
+      number: "04",
       question: t.faq4Question,
       answer: t.faq4Answer,
     },
@@ -30,6 +34,7 @@ function FAQ() {
       className="botanical-bg bg-[#FAF8F3] py-24"
       data-aos="fade-up"
     >
+
       <div className="mx-auto max-w-5xl px-6">
 
 
@@ -51,21 +56,34 @@ function FAQ() {
 
 
 
-        <div className="mt-16 space-y-6">
+
+        <div className="mt-16 space-y-10">
+
 
           {faqs.map((faq) => (
 
             <div
-              key={faq.question}
-              className="rounded-3xl border border-[#E7DDCC] bg-[#FFFDF9] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              key={faq.number}
+              className="border-b border-[#E7DDCC] pb-10"
             >
 
+
+              <p
+                className="text-3xl font-bold text-[#B06B45]"
+                style={{ fontFamily: "Playfair Display" }}
+              >
+                {faq.number}
+              </p>
+
+
+
               <h3
-                className="text-xl font-bold text-slate-900"
+                className="mt-4 text-2xl font-bold text-slate-900"
                 style={{ fontFamily: "Playfair Display" }}
               >
                 {faq.question}
               </h3>
+
 
 
               <p className="mt-4 leading-8 text-slate-600">
@@ -77,10 +95,13 @@ function FAQ() {
 
           ))}
 
+
         </div>
 
 
       </div>
+
+
     </section>
   );
 }

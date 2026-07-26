@@ -5,6 +5,7 @@ import { translations } from "../translations/translations";
 function Navbar() {
   const { language, toggleLanguage } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [programOpen, setProgramOpen] = useState(false);
 
   const t = translations[language];
 
@@ -33,34 +34,68 @@ function Navbar() {
 
           <a
             href="#about"
-            className="transition duration-300 hover:text-[#B06B45] hover:scale-105"
+            className="transition hover:text-[#B06B45]"
           >
             {t.about}
           </a>
 
 
 
+          {/* Programs */}
+
+          <div className="relative">
+
+            <button
+              onClick={() => setProgramOpen(!programOpen)}
+              className="transition hover:text-[#B06B45]"
+            >
+              {t.programs || "Programs"}
+            </button>
+
+
+
+            {programOpen && (
+
+              <div className="absolute left-0 mt-4 w-48 rounded-2xl border border-[#E7DDCC] bg-[#FFFDF9] p-4 shadow-xl">
+
+                <a
+                  href="#courses"
+                  className="block rounded-lg px-3 py-2 hover:bg-[#F3ECE0]"
+                >
+                  {t.spanishProgram || "Spanish"}
+                </a>
+
+
+                <a
+                  href="#courses"
+                  className="block rounded-lg px-3 py-2 hover:bg-[#F3ECE0]"
+                >
+                  {t.englishProgram || "English"}
+                </a>
+
+              </div>
+
+            )}
+
+          </div>
+
+
+
+
+
           <a
-            href="#courses"
-            className="transition duration-300 hover:text-[#B06B45] hover:scale-105"
+            href="#how"
+            className="transition hover:text-[#B06B45]"
           >
-            {t.courses}
+            {t.howNav}
           </a>
 
-
-
-          <a
-            href="#who"
-            className="transition duration-300 hover:text-[#B06B45] hover:scale-105"
-          >
-            {t.whoITeach}
-          </a>
 
 
 
           <a
             href="#faq"
-            className="transition duration-300 hover:text-[#B06B45] hover:scale-105"
+            className="transition hover:text-[#B06B45]"
           >
             {t.faq}
           </a>
@@ -73,18 +108,16 @@ function Navbar() {
             onClick={toggleLanguage}
             className="rounded-full border border-[#D8CCB8] px-4 py-2 transition hover:bg-[#EDE5D8]"
           >
-            {language === "en" ? "🇺🇸 EN" : "🇪🇸 ES"}
+            {language === "en" ? "EN" : "ES"}
           </button>
 
 
 
 
 
-          {/* Free Trial Button */}
-
           <a
             href="#booking"
-            className="rounded-full bg-[#799A76] px-6 py-3 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#5F805C] hover:shadow-xl"
+            className="rounded-full bg-[#799A76] px-6 py-3 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#5F805C]"
           >
             {t.freeTrial}
           </a>
@@ -97,7 +130,7 @@ function Navbar() {
 
 
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Button */}
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -105,7 +138,6 @@ function Navbar() {
         >
           {menuOpen ? "✕" : "☰"}
         </button>
-
 
 
       </div>
@@ -139,17 +171,17 @@ function Navbar() {
               className="py-3"
               onClick={() => setMenuOpen(false)}
             >
-              {t.courses}
+              {t.programs || "Programs"}
             </a>
 
 
 
             <a
-              href="#who"
+              href="#how"
               className="py-3"
               onClick={() => setMenuOpen(false)}
             >
-              {t.whoITeach}
+              {t.howBadge}
             </a>
 
 
@@ -165,7 +197,6 @@ function Navbar() {
 
 
 
-
             <button
               onClick={() => {
                 toggleLanguage();
@@ -173,14 +204,12 @@ function Navbar() {
               }}
               className="mt-4 rounded-full border border-[#D8CCB8] px-4 py-3"
             >
-              {language === "en" ? "🇺🇸 English" : "🇪🇸 Español"}
+              {language === "en" ? "English" : "Español"}
             </button>
 
 
 
 
-
-            {/* Mobile Free Trial */}
 
             <a
               href="#booking"
@@ -189,7 +218,6 @@ function Navbar() {
             >
               {t.freeTrial}
             </a>
-
 
 
 

@@ -34,6 +34,7 @@ function HowItWorks() {
       className="botanical-bg bg-[#FAF8F3] py-24"
       data-aos="fade-up"
     >
+
       <div className="mx-auto max-w-7xl px-6">
 
 
@@ -60,39 +61,45 @@ function HowItWorks() {
 
 
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
 
 
           {steps.map((step) => (
 
             <div
               key={step.number}
-              className="relative rounded-3xl border border-[#E7DDCC] bg-[#FFFDF9] p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="rounded-3xl border border-[#E7DDCC] bg-[#FFFDF9] p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
 
 
-              <div className="absolute -top-5 left-8 flex h-14 w-14 items-center justify-center rounded-full bg-[#799A76] text-lg font-bold text-white shadow-lg">
-                {step.number}
-              </div>
+              <div className="flex items-center gap-4">
 
-
-              <div className="pt-8">
-
-
-                <h3
-                  className="text-2xl font-bold text-slate-900"
+                <span
+                  className="text-4xl font-bold text-[#B06B45]"
                   style={{ fontFamily: "Playfair Display" }}
                 >
-                  {step.title}
-                </h3>
+                  {step.number}
+                </span>
 
 
-                <p className="mt-5 leading-8 text-slate-600">
-                  {step.description}
-                </p>
-
+                <div className="h-px flex-1 bg-[#E7DDCC]"></div>
 
               </div>
+
+
+
+              <h3
+                className="mt-8 text-2xl font-bold text-slate-900"
+                style={{ fontFamily: "Playfair Display" }}
+              >
+                {step.title}
+              </h3>
+
+
+
+              <p className="mt-5 leading-8 text-slate-600">
+                {step.description}
+              </p>
 
 
             </div>
@@ -104,6 +111,7 @@ function HowItWorks() {
 
 
       </div>
+
     </section>
   );
 }
