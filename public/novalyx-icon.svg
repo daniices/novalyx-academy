@@ -1,0 +1,35 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="120" fill="#465A45"/>
+
+  <!-- Decorative circle -->
+  <circle 
+    cx="256" 
+    cy="256" 
+    r="170" 
+    stroke="#FAF8F3" 
+    stroke-width="8" 
+    opacity="0.35"
+  />
+
+  <!-- N Letter -->
+  <path
+    d="M155 360V152H205L307 292V152H357V360H307L205 220V360H155Z"
+    fill="#FAF8F3"
+  />
+
+  <!-- Botanical accent leaf -->
+  <path
+    d="M350 125C405 135 430 180 410 225C365 210 340 170 350 125Z"
+    fill="#B06B45"
+  />
+
+  <path
+    d="M365 150C385 165 395 185 395 205"
+    stroke="#FAF8F3"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+</svg>
