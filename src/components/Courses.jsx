@@ -61,6 +61,7 @@ function Courses() {
       />
 
 
+
       <div className="relative z-10 mx-auto max-w-7xl px-6">
 
 
@@ -84,6 +85,7 @@ function Courses() {
           </p>
 
         </div>
+
 
 
 
@@ -116,6 +118,7 @@ function Courses() {
 
 
 
+
               <div className="mt-8 space-y-5">
 
                 {program.courses.map((course) => (
@@ -138,11 +141,16 @@ function Courses() {
 
 
 
-              <button
-                className={`mt-10 rounded-full px-8 py-3 text-white transition duration-300 ${program.button}`}
+
+              {/* Learn More Button */}
+
+              <a
+                href="#booking"
+                className={`mt-10 inline-block rounded-full px-8 py-3 text-white transition duration-300 ${program.button}`}
               >
                 {t.learnMore}
-              </button>
+              </a>
+
 
 
             </div>
