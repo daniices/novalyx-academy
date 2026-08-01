@@ -142,7 +142,7 @@ function Footer() {
 
 
               <p>
-                📧 hello@novalyxacademy.com
+                📧 dcespedes@novalyxacademy.com
               </p>
 
 
